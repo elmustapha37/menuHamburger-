@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+nav{
+    background-color: #2D033B;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+nav .mainMenu{
+    display: flex;
+    list-style: none;
+}
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+nav .mainMenu li a:hover{
+    background-color:#E5B8F4;
+    color: #2D033B;
+}
+nav .openMenu{
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+nav .mainMenu .closeMenu, .icons i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.fa-facebook:hover{
+    color: rgb(16, 16, 255);
+}
+.fa-instagram:hover{
+    color: rgb(255, 49, 135);
+}
+.fa-twitter:hover{
+    color: rgb(41, 126, 255);
+}
+.fa-github:hover{
+    color: rgb(255, 133, 52);
+}
+nav .logo{
+    font-size: 26px;
+    margin: 6px;
+    cursor: pointer;
+}
+.logo h1:hover{
+    color: #E5B8F4;
+}
+.copyright{
+    position: relative;
+    height: 300px;
+}
+#myName{
+    position: absolute;
+    bottom: 0;
+    left: 50%;    
+    color: #2D033B;
+    font-size: 1rem;
+    transform: translateX(-50%);
+}
+
+@media(max-width:800px){
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #2D033B;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .closeMenu i:hover{
+        font-size: 2.2rem;
+        color: #C147E9;
+    }
+    nav .openMenu{
+        display: block;
+    }
+    nav .mainMenu li a:hover{
+        background: none;
+        color: #E5B8F4;
+        font-size: 1.6rem;
+    }
+    .icons i{
+        display: inline-block;
+        padding: 60px 12px 10px 12px;
+    }
+    .containerB h3{
+        font-size: 1rem;
+    }
+}
